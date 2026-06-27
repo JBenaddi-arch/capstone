@@ -38,5 +38,26 @@
 <a href="#">GALERY</a>
 <a href="#">CONTACTUS</a>
         </div>
+        <section>
+<img src="image1.webp" alt="image1" class="mySlides" style="height: 500px;width: 1200px;">
+<img src="image2.webp" alt="image2" class="mySlides" style="height: 500px;width: 1200px;">
+<img src="image3.webp" alt="image3" class="mySlides" style="height: 500px;width: 1200px;">
+
+        </section>
+        <script>
+            var myIndex=0
+            slider()
+            function slider(){
+                var i
+                var x=document.getElementsByClassName("mySlides")
+                for(i=0;i<x.length;i++){
+                    x[i].style.display="none"
+                }
+myIndex++
+if(myIndex>x.length){myIndex=1}
+X[myIndex-1].style.display="block"
+setTimeout(slider,3000)
+            }
+        </script>
     </body>
 </html>
