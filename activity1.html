@@ -27,6 +27,61 @@
         background-color: #ddd;
         color: black;
     }
+    .section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+.img1{
+    background-image: url("image4.jpeg");
+    min-height: 400px;
+}
+.img2{
+    background-image:url("image5.jpeg") ;
+    min-height: 400px;
+}
+.img3{
+    background-image:url("image6.jpeg");
+    min-height: 400px;
+}
+.img1,.img2,.img3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pText{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.pText .border-trans{
+    background-color: transparent;
+}
+.pText .border{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #ddd;
+    text-align: center;
+}
 </style>
 
 
@@ -39,25 +94,53 @@
 <a href="#">CONTACTUS</a>
         </div>
         <section>
-<img src="image1.webp" alt="image1" class="mySlides" style="height: 500px;width: 1200px;">
-<img src="image2.webp" alt="image2" class="mySlides" style="height: 500px;width: 1200px;">
-<img src="image3.webp" alt="image3" class="mySlides" style="height: 500px;width: 1200px;">
-
+            <img src="image1.jpeg" alt="image1" class="myslides" style="height: 500px; width: 1500px;">
+            <img src="image2.jpeg" alt="image2" class="myslides" style="height: 500px; width: 1500px;">
+            <img src="image3.jpeg" alt="image3" class="myslides" style="height: 500px; width: 1500px;">
         </section>
+        <section class="section section-dark">
+            <h2>What is Cybersecurity?</h2>
+            <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. It aims to secure sensitive information from hackers.</p>
+        </section>
+        <div class="img1">
+            <div class="pText">
+                <span class="border-trans">Image1 text</span>
+            </div>
+        </div>
+         <section class="section section-dark">
+    <h2>Common Cyber Threats</h2>
+    <p>Cybercriminals use various methods to attack systems. The most common threats include malware (harmful software like viruses) and phishing, which uses fake emails to steal private data.</p>
+</section>
+        <div class="img2">
+            <div class="pText">
+                <span class="border-trans">Image2 text</span>
+            </div>
+        </div>
+         <section class="section section-dark">
+    <h2>How to Stay Safe Online</h2>
+    <p>Protecting yourself is simple. You should always use strong, unique passwords for your accounts, enable two-factor authentication (2FA), and never click on suspicious links.</p>
+</section>
+        <div class="img3">
+            <div class="pText">
+                <span class="border-trans">Image3 text</span>
+            </div>
+        </div>
         <script>
             var myIndex=0
-            slider()
-            function slider(){
-                var i
-                var x=document.getElementsByClassName("mySlides")
-                for(i=0;i<x.length;i++){
-                    x[i].style.display="none"
-                }
-myIndex++
-if(myIndex>x.length){myIndex=1}
-X[myIndex-1].style.display="block"
-setTimeout(slider,3000)
-            }
+carousel()
+function carousel(){
+    var i
+    var x=document.getElementsByClassName("myslides")
+    for(i=0; i<x.length; i++){
+        x[i].style.display="none"
+    }
+    myIndex++
+    if(myIndex>x.length){
+        myIndex=1
+    }
+    x[myIndex-1].style.display="block"
+    setTimeout(carousel,3000)
+}
         </script>
     </body>
 </html>
